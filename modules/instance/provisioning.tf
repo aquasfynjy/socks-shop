@@ -8,7 +8,8 @@ resource "null_resource" "docker-swarm-manager" {
   }
 
   provisioner "file" {
-    source = "/root/terraform/socks/docker-compose/docker-compose-v3.yml"
+# Указать путь к docker-compose.yml с учетом названия проекта.
+    source = "/root/terraform/<ur_folder_or_path>/socks-shop/docker-compose/docker-compose-v3.yml"
     destination = "~/docker-compose.yml"
   }
 
